@@ -1,20 +1,36 @@
-import Delivery from './view/Delivery';
+import Delivery from "./view/Delivery";
 import React from "react";
 import Main from "./layout/Main.jsx";
 import Home from "./view/Home.jsx";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Footer from "./layout/Footer";
 
-function App(props) {
+function App() {
   return (
-    <div>
-      <Main>
-        <img
-          style={{ width: "100%", height: "100%", margin: 0 }}
-          src="assets/space1.jpg"
+    <Router>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <Main>
+              <Home />
+              <Footer />
+            </Main>
+          )}
         />
-        <Home />
-        <Delivery />
-      </Main>
-    </div>
+        <Route
+          exact
+          path="/delivery"
+          render={() => (
+            <Main>
+              <Delivery />
+              <Footer />
+            </Main>
+          )}
+        />
+      </Switch>
+    </Router>
   );
 }
 
