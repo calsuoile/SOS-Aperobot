@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from "./Footer.jsx"
 import Header from "./Header.jsx"
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -18,18 +17,14 @@ const useStyles = makeStyles({
   });
 
 function Main(props) {
+  const { children } = props;
 
-    const { children } = props;
-    const classes = useStyles
-
-    return (
-        <div className={classes.root}>
-            <Header />  
-            {children}
-            <Footer />
-             
-        </div>
-    );
+  return (
+    <div>
+      <Header />
+      {children}
+    </div>
+  );
 }
 
 export default Main;
