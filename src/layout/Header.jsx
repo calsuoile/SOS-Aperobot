@@ -9,14 +9,20 @@ const useStyles = makeStyles({
     backgroundColor: "black",
     margin: 0,
     alignItems: "center",
+    position: "fixed",
+    top: 0,
   },
 });
 
-function Header(props) {
+function Header() {
   const classes = useStyles();
   return (
     <div className={classes.burger}>
-      <img style={{ width: "100%" }} src="assets/HEADER_apero.jpeg" />
+      <img
+        style={{ width: "100%" }}
+        src="assets/HEADER_apero.jpeg"
+        alt="header"
+      />
       <MenuBurger />
     </div>
   );

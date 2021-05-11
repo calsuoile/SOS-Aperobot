@@ -11,6 +11,7 @@ const useStyles = makeStyles(() => ({
     boxShadow: "0px 3px 15px #b3b3b3",
     margin: "30px 20px",
     fontFamily: "Comfortaa, cursive",
+    top: 268,
   },
 
   drinkPicture: {
