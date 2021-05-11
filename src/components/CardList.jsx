@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "./Card";
 
 function CardList() {
@@ -155,10 +156,12 @@ function CardList() {
   ];
 
   return (
-    <div>
+    <div><Link to="/about">About
+      <h1>Nos boissons pétrolés</h1></Link>
       {sampleCocktails.map((cocktail, index) => (
         <Card key={index} {...cocktail} />
       ))}
+      <h1>Nos </h1>
       {sampleSnacks.map((snack, index) => (
         <Card key={index} {...snack} />
       ))}

@@ -1,27 +1,15 @@
-import { Router } from 'express';
 import React from 'react';
 import Header from './layout/Header';
 import Delivery from './view/Delivery';
-import React from "react";
 import Main from "./layout/Main.jsx";
 import Home from "./view/Home.jsx";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import CardList from './components/CardList';
 
 function App(props) {
   return (
     <div>
-       <Router>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <Main>
-               
-              </Main>
-            )}
-          />
-        </Switch>
-       </Router>
+  
       <Header />
       <Main>
         <img
