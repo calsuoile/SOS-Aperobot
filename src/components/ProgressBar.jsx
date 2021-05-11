@@ -29,27 +29,38 @@ LinearProgressWithLabel.propTypes = {
 };
 
 const useStyles = makeStyles({
-  root: {
-    width: '100%',
+  progressbar: {
+    width: '70%',
+    margin: 'auto',
   },
+  title: {
+    with: '85%',
+    margin: 'auto',
+    textAlign: 'center',
+  }
 });
 
 export default function ProgressBar() {
   const classes = useStyles();
-  const [progress, setProgress] = React.useState(10);
+  const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
-    }, 800);
+      if (progress < 100) {
+        setProgress(progress + 2)
+      }
+    }, 1000);
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [progress]);
 
   return (
     <div className={classes.root}>
+      <h3 className={classes.title}>6PO a préparé ta commande, elle est en cours de livraison, tu pourras bientôt arrêter de t'ennuyer</h3>
+      <div className={classes.progressbar}>
       <LinearProgressWithLabel value={progress} />
+      </div>
     </div>
   );
 }
