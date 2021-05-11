@@ -1,7 +1,7 @@
+import Delivery from './view/Delivery';
 import React from "react";
 import Main from "./layout/Main.jsx";
 import Home from "./view/Home.jsx";
-import Header from "./layout/Header";
 
 function App(props) {
   return (
@@ -12,6 +12,7 @@ function App(props) {
           src="assets/space1.jpg"
         />
         <Home />
+        <Delivery />
       </Main>
     </div>
   );
