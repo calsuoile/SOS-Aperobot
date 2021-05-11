@@ -1,10 +1,11 @@
 import React from 'react';
+import Header from './layout/Header';
+
 
 function App(props) {
   return (
     <div>
-      <h1>SOS Apérobot</h1>
-      
+      <Header />
     </div>
   );
 }
