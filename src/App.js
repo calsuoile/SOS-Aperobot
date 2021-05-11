@@ -8,12 +8,11 @@ function App(props) {
     <div>
       <Main>
         <img
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "100%", height: "100%", margin: 0 }}
           src="assets/space1.jpg"
         />
         <Home />
       </Main>
-      <Header />
     </div>
   );
 }
