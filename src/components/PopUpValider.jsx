@@ -29,7 +29,7 @@ function PopUpValider(props) {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push("/Delivery");
+    history.push("/delivery");
   };
 
   return (
@@ -46,7 +46,7 @@ function PopUpValider(props) {
       </Button>
       <Dialog
         open={open}
-        // onClose={() => setOpen(false)}
+        onClose={() => setOpen(false)}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
