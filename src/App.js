@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
+import Home from "./view/Home";
 
-function App(props) {
+function App() {
   return (
     <div>
-      <h1>SOS Apérobot</h1>
-      
+      <Home />
     </div>
   );
 }

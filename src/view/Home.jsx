@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
+import CardList from "../components/CardList";
 
-function Home(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+function Home() {
+  return (
+    <div>
+      <CardList />
+    </div>
+  );
 }
 
 export default Home;
