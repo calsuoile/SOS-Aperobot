@@ -18,6 +18,7 @@ import LocalBarIcon from '@material-ui/icons/LocalBar';
 import FastfoodIcon from '@material-ui/icons/Fastfood';
 import LocalDrinkIcon from '@material-ui/icons/LocalDrink';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -152,6 +153,14 @@ export default function MenuBurger() {
                   <FavoriteIcon className={classes.plus} />
                 </ListItemIcon>
                 <strong>EXTRAS</strong>
+              </Button>
+            </li>
+            <li>
+              <Button className={classes.ajout}>
+                <ListItemIcon>
+                  <ArrowUpwardIcon className={classes.plus} />
+                </ListItemIcon>
+                <strong>CHECKOUT</strong>
               </Button>
             </li>
           </ul>
