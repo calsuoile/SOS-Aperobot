@@ -1,10 +1,18 @@
 import React from "react";
-import CardList from "../components/CardList";
+import Drinks from "../components/Drinks";
+import Extras from "../components/Extras";
+import Formules from "../components/Formules";
+import Snacks from "../components/Snacks";
+import PopUpValider from "../components/PopUpValider";
 
 function Home() {
   return (
     <div>
-      <CardList />
+      <Drinks />
+      <Snacks />
+      <Formules />
+      <Extras />
+      <PopUpValider />
     </div>
   );
 }

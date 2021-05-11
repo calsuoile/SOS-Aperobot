@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "./Card";
 
-function CardList() {
+function Drinks() {
   const sampleCocktails = [
     {
       name: "SpaceXperience",
@@ -80,99 +80,15 @@ function CardList() {
       price: "35 MartianCoin",
     },
   ];
-  const sampleSnacks = [
-    {
-      name: "Sachet de boulons à l’huile",
-      avatar: "",
-      price: "5 MartianCoin",
-    },
-    {
-      name: "Sachet de vis nature",
-      avatar: "",
-      price: "5 MartianCoin",
-    },
-    {
-      name: "Sachet de clous",
-      avatar: "",
-      price: "5 MartianCoin",
-    },
-    {
-      name: "Sachet d’écrous à l’huile",
-      avatar: "",
-      price: "5 MartianCoin",
-    },
-    {
-      name: "Rouleau de fil électrique",
-      avatar: "",
-      price: "6 MartianCoin",
-    },
-  ];
-  const sampleFormules = [
-    {
-      name: "Formule 1",
-      avatar: "",
-      price: "70 MartianCoin",
-    },
-    {
-      name: "Formule 2",
-      avatar: "",
-      price: "",
-    },
-    {
-      name: "Formule 3",
-      avatar: "",
-      price: "",
-    },
-    {
-      name: "Formule 4",
-      avatar: "",
-      price: "",
-    },
-
-    {
-      name: "Formule premium",
-      avatar: "",
-      price: "",
-    },
-  ];
-
-  const sampleExtras = [
-    {
-      name: "Feu d’artifices",
-      avatar: "",
-      price: "30 MartianCoin",
-    },
-
-    {
-      name: "Déguisement R2D2",
-      avatar: "",
-      price: "",
-    },
-    {
-      name: "Goodies de la WildCodeSchool",
-      avatar: "",
-      price: "",
-    },
-  ];
 
   return (
-    <div><Link to="/about">About
-      <h1>Nos boissons pétrolés</h1></Link>
+    <div style={{ marginTop: "100px" }}>
+      <h1>Boissons</h1>
       {sampleCocktails.map((cocktail, index) => (
         <Card key={index} {...cocktail} />
-      ))}
-      <h1>Nos </h1>
-      {sampleSnacks.map((snack, index) => (
-        <Card key={index} {...snack} />
-      ))}
-      {sampleFormules.map((formule, index) => (
-        <Card key={index} {...formule} />
-      ))}
-      {sampleExtras.map((extra, index) => (
-        <Card key={index} {...extra} />
       ))}
     </div>
   );
 }
 
-export default CardList;
+export default Drinks;
