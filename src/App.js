@@ -1,10 +1,10 @@
 import React from "react";
-import Home from "./view/Home";
+import Header from "./layout/Header";
 
 function App() {
   return (
     <div>
-      <Home />
+      <Header />
     </div>
   );
 }
