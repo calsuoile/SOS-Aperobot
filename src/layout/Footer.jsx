@@ -13,9 +13,8 @@ const useStyles = makeStyles({
     textAlign: "center",
     // margin: "0 auto",
     fontSize: "100%",
-    height: "120px",
+    height: "80px",
     bottom: 0,
-    // position: "fixed",
     width: "100%",
   },
 });

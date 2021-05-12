@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "./Card";
 
 function Drinks() {
@@ -9,14 +10,6 @@ function Drinks() {
       isVirgin: false,
       ingredients: "Whitespirit, boulons, huile",
       price: "60 MartianCoin",
-    },
-
-    {
-      name: "La Jupiter",
-      avatar: "assets/jupiter.png",
-      isVirgin: false,
-      ingredients: "",
-      price: "20 MartianCoin",
     },
 
     {
@@ -77,6 +70,13 @@ function Drinks() {
       isVirgin: true,
       ingredients: "",
       price: "35 MartianCoin",
+    },
+    {
+      name: "La Jupiter",
+      avatar: "assets/jupiter.png",
+      isVirgin: false,
+      ingredients: "",
+      price: "20 MartianCoin",
     },
   ];
 

@@ -11,6 +11,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     position: "fixed",
     top: 0,
+    zIndex: 1,
   },
 });
 
