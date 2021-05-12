@@ -1,4 +1,5 @@
 import React from "react";
+import UpButton from "../components/UpButton.jsx";
 import Header from "./Header.jsx";
 
 function Main(props) {
@@ -8,6 +9,7 @@ function Main(props) {
     <div>
       <Header />
       {children}
+      <UpButton showBelow={250} />
     </div>
   );
 }
