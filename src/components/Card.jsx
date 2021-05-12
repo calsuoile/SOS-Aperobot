@@ -14,11 +14,13 @@ const useStyles = makeStyles(() => ({
     top: 268,
     backgroundColor: "#60AAFF",
     color: "#7046FF",
+    borderRadius: "20px",
   },
 
   drinkPicture: {
     width: "250px",
     height: "300px",
+    borderRadius: "20px",
   },
 
   drinkName: {
