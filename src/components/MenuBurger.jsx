@@ -142,21 +142,6 @@ export default function MenuBurger() {
             <li>
               <Button
                 className={classes.ajout}
-                to="/formules"
-                component={Link}
-                style={{ textDecoration: "none", backgroundColor: "#60AAFF" }}
-              >
-                <ListItemIcon>
-                  <FastfoodIcon className={classes.plus} />
-                </ListItemIcon>
-                <>
-                  <strong>FORMULES</strong>{" "}
-                </>
-              </Button>
-            </li>
-            <li>
-              <Button
-                className={classes.ajout}
                 to="/snacks"
                 component={Link}
                 style={{ textDecoration: "none", backgroundColor: "#60AAFF" }}
