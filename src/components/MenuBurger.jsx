@@ -109,7 +109,7 @@ export default function MenuBurger() {
         <div className={classes.menuburgerlist}>
           <ul className={classes.puces}>
             <li>
-              <Button className={classes.accueil}>
+              <Button className={classes.accueil} to="/" component={Link}>
                 <ListItemIcon>
                   <HomeIcon className={classes.plus} />
                 </ListItemIcon>
