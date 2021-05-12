@@ -16,8 +16,13 @@ function Extras() {
     },
     {
       name: "Goodies de la WildCodeSchool",
-      avatar: "",
-      price: "",
+      avatar: "assets/flat.png",
+      price: "30 MartianCoin",
+    },
+    {
+      name: "Formule premium",
+      avatar: "assets/zouz.jpg",
+      price: "250 MartianCoin",
     },
   ];
   return (

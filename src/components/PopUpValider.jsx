@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   buttonContaineur: {
     display: "flex",
     justifyContent: "center",
-  }
+  },
 }));
 
 function PopUpValider(props) {

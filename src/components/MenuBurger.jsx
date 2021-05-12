@@ -8,10 +8,8 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
 import LocalBarIcon from "@material-ui/icons/LocalBar";
-import FastfoodIcon from "@material-ui/icons/Fastfood";
 import LocalDrinkIcon from "@material-ui/icons/LocalDrink";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -112,18 +110,18 @@ export default function MenuBurger() {
         <div className={classes.menuburgerlist}>
           <ul className={classes.puces}>
             <li>
-<<<<<<< HEAD
-              <Button className={classes.accueil} to="/" component={Link}>
-=======
               <Button
                 className={classes.accueil}
+                to="/"
+                component={Link}
                 style={{ backgroundColor: "#60AAFF" }}
               >
->>>>>>> origin/dev
                 <ListItemIcon>
                   <HomeIcon className={classes.plus} />
                 </ListItemIcon>
-                <strong>ACCUEIL</strong>
+                <Link to="/">
+                  <strong>ACCUEIL</strong>
+                </Link>
               </Button>
             </li>
             <li>
