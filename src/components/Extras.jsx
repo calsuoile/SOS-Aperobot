@@ -5,13 +5,13 @@ function Extras() {
   const sampleExtras = [
     {
       name: "Feu d’artifices",
-      avatar: "",
+      avatar: "assets/petard.jpg",
       price: "30 MartianCoin",
     },
 
     {
       name: "Déguisement R2D2",
-      avatar: "",
+      avatar: "assets/R2D2.jpeg",
       price: "",
     },
     {
@@ -22,7 +22,7 @@ function Extras() {
   ];
   return (
     <div style={{ marginTop: "100px" }}>
-      <h1>Boissons</h1>
+      <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px" }}>Extras</h1>
       {sampleExtras.map((extra, index) => (
         <Card key={index} {...extra} />
       ))}

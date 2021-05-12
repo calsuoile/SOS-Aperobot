@@ -13,14 +13,6 @@ function Drinks() {
     },
 
     {
-      name: "La Jupiter",
-      avatar: "assets/jupiter.png",
-      isVirgin: false,
-      ingredients: "",
-      price: "20 MartianCoin",
-    },
-
-    {
       name: "Cosmospolitan",
       avatar: "assets/cosmospolitan.jpg",
       isVirgin: true,
@@ -79,11 +71,18 @@ function Drinks() {
       ingredients: "",
       price: "35 MartianCoin",
     },
+    {
+      name: "La Jupiter",
+      avatar: "assets/jupiter.png",
+      isVirgin: false,
+      ingredients: "",
+      price: "20 MartianCoin",
+    },
   ];
 
   return (
-    <div style={{ marginTop: "100px" }}>
-      <h1>Boissons</h1>
+    <div>
+      <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px" }}>Boissons</h1>
       {sampleCocktails.map((cocktail, index) => (
         <Card key={index} {...cocktail} />
       ))}
