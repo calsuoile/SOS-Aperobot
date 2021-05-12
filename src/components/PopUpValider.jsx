@@ -61,7 +61,7 @@ function PopUpValider(props) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description" style={{color:"#60AAFF"}}>
-            Merci Percy ou Genny, votre commande a bien été prise en compte.
+            Merci Percy, ta commande a bien été prise en compte.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
