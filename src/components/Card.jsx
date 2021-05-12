@@ -13,7 +13,7 @@ const useStyles = makeStyles(() => ({
     fontFamily: "Comfortaa, cursive",
     top: 268,
     backgroundColor: "#60AAFF",
-    color: "#7046FF"
+    color: "#7046FF",
   },
 
   drinkPicture: {
@@ -36,7 +36,6 @@ const useStyles = makeStyles(() => ({
     alignSelf: "flex-center",
   },
 }));
-
 
 function Card({ name, avatar, isVirgin, price }) {
   const classes = useStyles();
