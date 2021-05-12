@@ -112,10 +112,14 @@ export default function MenuBurger() {
         <div className={classes.menuburgerlist}>
           <ul className={classes.puces}>
             <li>
+<<<<<<< HEAD
+              <Button className={classes.accueil} to="/" component={Link}>
+=======
               <Button
                 className={classes.accueil}
                 style={{ backgroundColor: "#60AAFF" }}
               >
+>>>>>>> origin/dev
                 <ListItemIcon>
                   <HomeIcon className={classes.plus} />
                 </ListItemIcon>

@@ -25,13 +25,13 @@ function Snacks() {
     },
     {
       name: "Rouleau de fil électrique",
-      avatar: "assets/vis.jpg",
+      avatar: "assets/fil-electrique.jpeg",
       price: "6 MartianCoin",
     },
   ];
   return (
     <div style={{ marginTop: "100px" }}>
-      <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px" }}>Snacks</h1>
+      <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px", color: "#60AAFF", textAlign: "center" }}>Snacks</h1>
       {sampleSnacks.map((snack, index) => (
         <Card key={index} {...snack} />
       ))}
