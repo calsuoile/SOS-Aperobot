@@ -12,15 +12,16 @@ function Home() {
       <h3
         style={{
           fontFamily: "Comfortaa",
-          color: "white",
+          color: "#60AAFF",
           marginTop: "100px",
           marginLeft: "20px",
           marginRight: "20px",
-          textAlign: "justify"
+          textAlign: "justify",
         }}
       >
-        Comme tu nous a dis que PHP t'ennuyais, nous t'avons préparé une petite surprise.
-        Commande l'apéro en quelques clics, ton pote reçoit la notif et viens chercher la commande à te livrer.
+        Comme tu nous as dit que PHP t'ennuyais, nous t'avons préparé une petite
+        surprise. Commande l'apéro en quelques clics, ton pote reçoit la notif
+        et viens chercher la commande à te livrer.
       </h3>
       <img
         style={{ width: "360px", marginTop: "20px" }}

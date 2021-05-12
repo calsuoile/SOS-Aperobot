@@ -36,7 +36,7 @@ const useStyles = makeStyles({
     marginTop: "80px",
     marginLeft: "20px",
     marginRight: "20px",
-    paddingTop: "10px",
+    paddingTop: "120px",
   },
   progressbar: {
     width: "70%",
@@ -48,6 +48,10 @@ const useStyles = makeStyles({
     textAlign: "center",
     color: "#60AAFF",
     fontFamily: "Comfortaa",
+  },
+  plus: {
+    color: "#60AAFF",
+    margin: "auto",
   },
 });
 
@@ -84,13 +88,13 @@ export default function ProgressBar() {
     <div className={classes.root}>
       <h3 className={classes.title}>
         6PO a préparé ta commande, elle est en cours de livraison, tu pourras
-        bientôt arrêter de t'ennuyer
+        bientôt arrêter de t'ennuyer.
       </h3>
       <div className={classes.progressbar}>
+        <LinearProgressWithLabel value={progress} />
         <ListItemIcon>
           <LocalBarRoundedIcon className={classes.plus} />
         </ListItemIcon>
-        <LinearProgressWithLabel value={progress} />
       </div>
       <Dialog
         open={open}
@@ -104,7 +108,10 @@ export default function ProgressBar() {
             id="alert-dialog-description"
             style={{ display: "flex", flexDirection: "column" }}
           >
-            <p> Votre livreur est arrivé, enjoy !</p>
+            <p style={{ color: "#60AAFF" }}>
+              {" "}
+              Votre livreur est arrivé, enjoy !
+            </p>
             <img
               src="assets/bender.gif"
               alt="bender"

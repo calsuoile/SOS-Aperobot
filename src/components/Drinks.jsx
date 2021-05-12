@@ -81,7 +81,7 @@ function Drinks() {
 
   return (
     <div>
-      <h1 style={{ fontFamily: "Comfortaa", color: "#60AAFF", textAlign: "center" }}>Boissons</h1>
+      <h1 style={{ fontFamily: "Comfortaa", color: "#60AAFF", textAlign: "center", paddingTop: "80px"}}>Boissons</h1>
       {sampleCocktails.map((cocktail, index) => (
         <Card key={index} {...cocktail} />
       ))}

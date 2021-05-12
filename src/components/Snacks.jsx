@@ -30,8 +30,8 @@ function Snacks() {
     },
   ];
   return (
-    <div style={{ marginTop: "100px" }}>
-      <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px", color: "#60AAFF", textAlign: "center" }}>Snacks</h1>
+    <div>
+      <h1 style={{ fontFamily: "Comfortaa", color: "#60AAFF", textAlign: "center", paddingTop: "80px"}}>Snacks</h1>
       {sampleSnacks.map((snack, index) => (
         <Card key={index} {...snack} />
       ))}
