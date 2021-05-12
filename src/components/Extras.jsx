@@ -26,8 +26,8 @@ function Extras() {
     },
   ];
   return (
-    <div style={{ marginTop: "100px" }}>
-      <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px", color: "#60AAFF", textAlign: "center" }}>Extras</h1>
+    <div>
+      <h1 style={{ fontFamily: "Comfortaa", color: "#60AAFF", textAlign: "center", paddingTop: "80px"}}>Extras</h1>
       {sampleExtras.map((extra, index) => (
         <Card key={index} {...extra} />
       ))}

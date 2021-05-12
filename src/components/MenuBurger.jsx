@@ -119,9 +119,7 @@ export default function MenuBurger() {
                 <ListItemIcon>
                   <HomeIcon className={classes.plus} />
                 </ListItemIcon>
-                <Link to="/">
-                  <strong>ACCUEIL</strong>
-                </Link>
+                <strong>ACCUEIL</strong>
               </Button>
             </li>
             <li>

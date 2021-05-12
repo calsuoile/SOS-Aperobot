@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     top: 268,
     backgroundColor: "#60AAFF",
     color: "#7046FF",
-    borderRadius: "20px",
+    borderRadius: "10px",
   },
 
   drinkPicture: {
@@ -34,7 +34,7 @@ const useStyles = makeStyles(() => ({
   },
 
   price: {
-    margin: "5px",
+    marginBottom: "-10px",
     alignSelf: "flex-center",
   },
 }));
