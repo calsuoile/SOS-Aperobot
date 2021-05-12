@@ -1,9 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import LinearProgress from '@material-ui/core/LinearProgress';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import LinearProgress from "@material-ui/core/LinearProgress";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import LocalBarRoundedIcon from '@material-ui/icons/LocalBarRounded';
+import ListItemIcon from "@material-ui/core/ListItemIcon";
 
 function LinearProgressWithLabel(props) {
   return (
@@ -12,8 +14,8 @@ function LinearProgressWithLabel(props) {
         <LinearProgress variant="determinate" {...props} />
       </Box>
       <Box minWidth={35}>
-        <Typography variant="body2" color="textSecondary">{`${Math.round(
-          props.value,
+        <Typography variant="body2" color="textPrimary">{`${Math.round(
+          props.value
         )}%`}</Typography>
       </Box>
     </Box>
@@ -29,15 +31,20 @@ LinearProgressWithLabel.propTypes = {
 };
 
 const useStyles = makeStyles({
+  root: {
+    marginTop: "120px",
+    marginLeft: "20px",
+    marginRight: "20px",
+  },
   progressbar: {
-    width: '70%',
-    margin: 'auto',
+    width: "70%",
+    margin: "auto",
   },
   title: {
-    with: '85%',
-    margin: 'auto',
-    textAlign: 'center',
-  }
+    with: "85%",
+    marginBottom: "20px",
+    textAlign: "center",
+  },
 });
 
 export default function ProgressBar() {
@@ -47,7 +54,7 @@ export default function ProgressBar() {
   React.useEffect(() => {
     const timer = setInterval(() => {
       if (progress < 100) {
-        setProgress(progress + 2)
+        setProgress(progress + 2);
       }
     }, 1000);
     return () => {
@@ -57,9 +64,15 @@ export default function ProgressBar() {
 
   return (
     <div className={classes.root}>
-      <h3 className={classes.title}>6PO a préparé ta commande, elle est en cours de livraison, tu pourras bientôt arrêter de t'ennuyer</h3>
+      <h3 className={classes.title}>
+        6PO a préparé ta commande, elle est en cours de livraison, tu pourras
+        bientôt arrêter de t'ennuyer
+      </h3>
       <div className={classes.progressbar}>
-      <LinearProgressWithLabel value={progress} />
+        <ListItemIcon>
+          <LocalBarRoundedIcon className={classes.plus} />
+        </ListItemIcon>
+        <LinearProgressWithLabel value={progress} />
       </div>
     </div>
   );
