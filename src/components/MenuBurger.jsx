@@ -12,6 +12,7 @@ import FastfoodIcon from "@material-ui/icons/Fastfood";
 import LocalDrinkIcon from "@material-ui/icons/LocalDrink";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   list: {
@@ -74,6 +75,7 @@ const useStyles = makeStyles({
   plus: {
     color: "#85F62C",
     fontSize: "30px",
+    textDecoration: "none",
   },
 });
 
@@ -115,11 +117,12 @@ export default function MenuBurger() {
               </Button>
             </li>
             <li>
+           
               <Button className={classes.nous} >
                 <ListItemIcon>
                   <LocalBarIcon className={classes.plus} />
                 </ListItemIcon>
-                <strong>COCKTAILS</strong>
+                <Link to="/drinks"><strong>COCKTAILS</strong> </Link>
               </Button>
             </li>
             <li>
@@ -127,7 +130,7 @@ export default function MenuBurger() {
                 <ListItemIcon>
                   <FastfoodIcon className={classes.plus} />
                 </ListItemIcon>
-                <strong>FORMULES</strong>
+                <Link to="/formules"><strong>FORMULES</strong> </Link>
               </Button>
             </li>
             <li>
@@ -135,7 +138,7 @@ export default function MenuBurger() {
                 <ListItemIcon>
                   <LocalDrinkIcon className={classes.plus} />
                 </ListItemIcon>
-                <strong>SNACKS</strong>
+                <Link to="/snacks"><strong>SNACKS</strong> </Link>
               </Button>
             </li>
             <li>
@@ -143,7 +146,7 @@ export default function MenuBurger() {
                 <ListItemIcon>
                   <FavoriteIcon className={classes.plus} />
                 </ListItemIcon>
-                <strong>EXTRAS</strong>
+                <Link to="/extras"><strong>EXTRAS</strong> </Link>
               </Button>
             </li>
             <li>
