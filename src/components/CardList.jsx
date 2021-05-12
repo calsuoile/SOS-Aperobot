@@ -154,7 +154,7 @@ function CardList() {
   ];
 
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div style={{ marginTop: "100px"}}>
       {sampleCocktails.map((cocktail, index) => (
         <Card key={index} {...cocktail} />
       ))}

@@ -9,18 +9,25 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
+import { FullscreenExitTwoTone } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
-    backgroundColor: "#DA7070",
-    color: "black",
+    backgroundColor: "black",
+    color: "#60AAFF",
     fontFamily: "'Comfortaa', cursive",
+    border: "1px solid #60AAFF",
+    width: "50%",
     "&:hover": {
-      background: "#FFB6A0",
+      background: "#7046FF",
       fontSize: "15px",
     },
   },
+  buttonContaineur: {
+    display: "flex",
+    justifyContent: "center",
+  }
 }));
 
 function PopUpValider(props) {
@@ -33,7 +40,7 @@ function PopUpValider(props) {
   };
 
   return (
-    <div>
+    <div className={classes.buttonContaineur}>
       <Button
         type="submit"
         onClick={() => setOpen(true)}
@@ -55,7 +62,7 @@ function PopUpValider(props) {
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Merci Percy et Genny, votre commande à bien été pris en compte, amusez vous bien.
+            Merci Percy et Genny, votre commande a bien été prise en compte.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
