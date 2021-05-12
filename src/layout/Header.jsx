@@ -1,6 +1,7 @@
 import React from "react";
 import MenuBurger from "../components/MenuBurger";
 import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   burger: {
@@ -19,11 +20,13 @@ function Header() {
   const classes = useStyles();
   return (
     <div className={classes.burger}>
-      <img
-        style={{ width: "100%" }}
-        src="assets/HEADER_apero.jpeg"
-        alt="header"
-      />
+      <Link to="/">
+        <img
+          style={{ width: "100%" }}
+          src="assets/HEADER_apero.jpeg"
+          alt="header"
+        />
+      </Link>
       <MenuBurger />
     </div>
   );
