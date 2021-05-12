@@ -81,7 +81,7 @@ function Drinks() {
   ];
 
   return (
-    <div>
+    <div style={{marginTop: "100px"}}>
       <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px" }}>Boissons</h1>
       {sampleCocktails.map((cocktail, index) => (
         <Card key={index} {...cocktail} />
