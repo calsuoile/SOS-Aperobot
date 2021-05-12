@@ -56,16 +56,16 @@ function PopUpValider(props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
+        <DialogTitle id="alert-dialog-title" style={{color:"#7046FF"}}>
           {"Confirmation d'envoi"}
         </DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Merci Percy et Genny, votre commande a bien été prise en compte.
+          <DialogContentText id="alert-dialog-description" style={{color:"#60AAFF"}}>
+            Merci Percy ou Genny, votre commande a bien été prise en compte.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClick} color="primary" autoFocus>
+          <Button onClick={handleClick} color="primary" autoFocus style={{color:"#60AAFF"}}>
             Fermer
           </Button>
         </DialogActions>
