@@ -50,7 +50,6 @@ function Card({ name, avatar, isVirgin, price }) {
     <div className={classes.cardContainer}>
       <h3>{name}</h3>
       <img src={avatar} alt={name} className={classes.drinkPicture} />
-      <p className={classes.isVirgin}>{isVirgin}</p>
       <p className={classes.price}>{price}</p>
       <Radio
         checked={selectedValue === "a"}

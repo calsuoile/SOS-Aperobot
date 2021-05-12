@@ -8,6 +8,11 @@ import PopUpValider from "../components/PopUpValider";
 function Home() {
   return (
     <div>
+      <img
+        style={{ width: "360px", marginTop: "80px" }}
+        src="assets/2894.png"
+        alt="homeBuddy"
+      />
       <Drinks />
       <Snacks />
       <Formules />
