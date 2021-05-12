@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./layout/Footer";
 import Drinks from "./components/Drinks";
 import Extras from "./components/Extras";
-import Formules from "./components/Formules";
 import Snacks from "./components/Snacks";
 
 function App() {
@@ -49,16 +48,6 @@ function App() {
           render={() => (
             <Main>
               <Extras />
-              <Footer />
-            </Main>
-          )}
-        />
-        <Route
-          exact
-          path="/formules"
-          render={() => (
-            <Main>
-              <Formules />
               <Footer />
             </Main>
           )}
