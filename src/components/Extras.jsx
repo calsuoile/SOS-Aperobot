@@ -16,13 +16,18 @@ function Extras() {
     },
     {
       name: "Goodies de la WildCodeSchool",
-      avatar: "",
-      price: "",
+      avatar: "assets/flat.png",
+      price: "30 MartianCoin",
+    },
+    {
+      name: "Formule premium",
+      avatar: "assets/zouz.jpg",
+      price: "250 MartianCoin",
     },
   ];
   return (
     <div style={{ marginTop: "100px" }}>
-      <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px" }}>Extras</h1>
+      <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px", color: "#60AAFF", textAlign: "center" }}>Extras</h1>
       {sampleExtras.map((extra, index) => (
         <Card key={index} {...extra} />
       ))}

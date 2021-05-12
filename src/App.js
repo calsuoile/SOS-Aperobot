@@ -33,7 +33,7 @@ function App() {
             </Main>
           )}
         />
-             <Route
+        <Route
           exact
           path="/drinks"
           render={() => (

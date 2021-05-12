@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import LocalBarRoundedIcon from '@material-ui/icons/LocalBarRounded';
+import LocalBarRoundedIcon from "@material-ui/icons/LocalBarRounded";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
+import { Dialog, DialogContent, DialogContentText } from "@material-ui/core";
 
 function LinearProgressWithLabel(props) {
   return (
@@ -32,9 +33,10 @@ LinearProgressWithLabel.propTypes = {
 
 const useStyles = makeStyles({
   root: {
-    marginTop: "120px",
+    marginTop: "80px",
     marginLeft: "20px",
     marginRight: "20px",
+    paddingTop: "10px",
   },
   progressbar: {
     width: "70%",
@@ -44,23 +46,39 @@ const useStyles = makeStyles({
     with: "85%",
     marginBottom: "20px",
     textAlign: "center",
+    color: "#60AAFF",
+    fontFamily: "Comfortaa",
   },
 });
 
 export default function ProgressBar() {
+  const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   const classes = useStyles();
   const [progress, setProgress] = React.useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
       if (progress < 100) {
-        setProgress(progress + 2);
+        setProgress(progress + 10);
       }
     }, 1000);
     return () => {
       clearInterval(timer);
     };
   }, [progress]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      handleClickOpen();
+    }, 11000);
+  }, []);
 
   return (
     <div className={classes.root}>
@@ -74,6 +92,27 @@ export default function ProgressBar() {
         </ListItemIcon>
         <LinearProgressWithLabel value={progress} />
       </div>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+      >
+        <DialogContent style={{ backgroundColor: "white" }}>
+          <DialogContentText
+            id="alert-dialog-description"
+            style={{ display: "flex", flexDirection: "column" }}
+          >
+            <p> Votre livreur est arrivé, enjoy !</p>
+            <img
+              src="assets/bender.gif"
+              alt="bender"
+              style={{ width: "200px" }}
+            />
+          </DialogContentText>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

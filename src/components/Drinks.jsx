@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Card from "./Card";
 
 function Drinks() {
@@ -81,8 +80,8 @@ function Drinks() {
   ];
 
   return (
-    <div style={{marginTop: "100px"}}>
-      <h1 style={{ fontFamily: "Comfortaa", marginLeft: "5px" }}>Boissons</h1>
+    <div>
+      <h1 style={{ fontFamily: "Comfortaa", color: "#60AAFF", textAlign: "center" }}>Boissons</h1>
       {sampleCocktails.map((cocktail, index) => (
         <Card key={index} {...cocktail} />
       ))}
