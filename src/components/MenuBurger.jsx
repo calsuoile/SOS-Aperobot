@@ -21,14 +21,16 @@ const useStyles = makeStyles({
   },
 
   burgerbut: {
-    color: "white",
+    color: "black",
     backgroundColor: "#5FAEFF",
     height: "60px",
     textAlign: "center",
     fontWeight: "bold",
     margin: "10px",
+    border: "1px solid #7046FF",
     "&:hover": {
       background: "#4E96AF",
+      backgroundColor: "black",
     },
   },
   puces: {
@@ -104,12 +106,16 @@ export default function MenuBurger() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      style={{ backgroundColor: "#60AAFF", height: "100%" }}
     >
       <List>
         <div className={classes.menuburgerlist}>
           <ul className={classes.puces}>
             <li>
-              <Button className={classes.accueil}>
+              <Button
+                className={classes.accueil}
+                style={{ backgroundColor: "#60AAFF" }}
+              >
                 <ListItemIcon>
                   <HomeIcon className={classes.plus} />
                 </ListItemIcon>
@@ -117,44 +123,63 @@ export default function MenuBurger() {
               </Button>
             </li>
             <li>
-           
-              <Button className={classes.nous} >
+              <Button
+                className={classes.nous}
+                to="/drinks"
+                component={Link}
+                style={{ textDecoration: "none", backgroundColor: "#60AAFF" }}
+              >
                 <ListItemIcon>
                   <LocalBarIcon className={classes.plus} />
                 </ListItemIcon>
-                <Link to="/drinks"><strong>COCKTAILS</strong> </Link>
+                <>
+                  <strong>COCKTAILS</strong>{" "}
+                </>
               </Button>
             </li>
             <li>
-              <Button className={classes.ajout}>
+              <Button
+                className={classes.ajout}
+                to="/formules"
+                component={Link}
+                style={{ textDecoration: "none", backgroundColor: "#60AAFF" }}
+              >
                 <ListItemIcon>
                   <FastfoodIcon className={classes.plus} />
                 </ListItemIcon>
-                <Link to="/formules"><strong>FORMULES</strong> </Link>
+                <>
+                  <strong>FORMULES</strong>{" "}
+                </>
               </Button>
             </li>
             <li>
-              <Button className={classes.ajout}>
+              <Button
+                className={classes.ajout}
+                to="/snacks"
+                component={Link}
+                style={{ textDecoration: "none", backgroundColor: "#60AAFF" }}
+              >
                 <ListItemIcon>
                   <LocalDrinkIcon className={classes.plus} />
                 </ListItemIcon>
-                <Link to="/snacks"><strong>SNACKS</strong> </Link>
+                <>
+                  <strong>SNACKS</strong>{" "}
+                </>
               </Button>
             </li>
             <li>
-              <Button className={classes.ajout}>
+              <Button
+                className={classes.ajout}
+                to="/extras"
+                component={Link}
+                style={{ textDecoration: "none", backgroundColor: "#60AAFF" }}
+              >
                 <ListItemIcon>
                   <FavoriteIcon className={classes.plus} />
                 </ListItemIcon>
-                <Link to="/extras"><strong>EXTRAS</strong> </Link>
-              </Button>
-            </li>
-            <li>
-              <Button className={classes.ajout}>
-                <ListItemIcon>
-                  <ArrowUpwardIcon className={classes.plus} />
-                </ListItemIcon>
-                <strong>CHECKOUT</strong>
+                <>
+                  <strong>EXTRAS</strong>{" "}
+                </>
               </Button>
             </li>
           </ul>
