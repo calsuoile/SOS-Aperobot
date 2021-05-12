@@ -15,7 +15,6 @@ const useStyles = makeStyles({
     fontSize: "100%",
     height: "80px",
     bottom: 0,
-    // position: "fixed",
     width: "100%",
   },
 });

@@ -12,6 +12,8 @@ const useStyles = makeStyles(() => ({
     margin: "30px 20px",
     fontFamily: "Comfortaa, cursive",
     top: 268,
+    backgroundColor: "#60AAFF",
+    color: "#7046FF"
   },
 
   drinkPicture: {
@@ -31,9 +33,10 @@ const useStyles = makeStyles(() => ({
 
   price: {
     margin: "5px",
-    alignSelf: "flex-end",
+    alignSelf: "flex-center",
   },
 }));
+
 
 function Card({ name, avatar, isVirgin, price }) {
   const classes = useStyles();
@@ -55,7 +58,7 @@ function Card({ name, avatar, isVirgin, price }) {
         value="a"
         name="radio-button-demo"
         inputProps={{ "aria-label": "A" }}
-        style={{ alignSelf: "flex-end", margin: "10px" }}
+        style={{ alignSelf: "center", margin: "10px", color: "#48FF95" }}
       />
     </div>
   );

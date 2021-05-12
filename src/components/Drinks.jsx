@@ -13,14 +13,6 @@ function Drinks() {
     },
 
     {
-      name: "La Jupiter",
-      avatar: "assets/jupiter.png",
-      isVirgin: false,
-      ingredients: "",
-      price: "20 MartianCoin",
-    },
-
-    {
       name: "Cosmospolitan",
       avatar: "assets/cosmospolitan.jpg",
       isVirgin: true,
@@ -78,6 +70,13 @@ function Drinks() {
       isVirgin: true,
       ingredients: "",
       price: "35 MartianCoin",
+    },
+    {
+      name: "La Jupiter",
+      avatar: "assets/jupiter.png",
+      isVirgin: false,
+      ingredients: "",
+      price: "20 MartianCoin",
     },
   ];
 
