@@ -37,7 +37,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Card({ name, avatar, isVirgin, price }) {
+function Card({ name, avatar, price }) {
   const classes = useStyles();
   const [selectedValue, setSelectedValue] = useState();
 
