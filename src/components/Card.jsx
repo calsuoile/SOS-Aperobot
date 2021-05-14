@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Radio from "@material-ui/core/Radio";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   cardContainer: {
     display: "flex",
     flexDirection: "column",
@@ -15,6 +15,9 @@ const useStyles = makeStyles(() => ({
     backgroundColor: "#60AAFF",
     color: "#7046FF",
     borderRadius: "10px",
+    [theme.breakpoints.up("sm")]: {
+      padding: "0 20px 0 20px",
+    },
   },
 
   drinkPicture: {

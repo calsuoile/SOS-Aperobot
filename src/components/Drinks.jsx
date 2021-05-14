@@ -1,7 +1,21 @@
 import React from "react";
 import Card from "./Card";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  cardContainer: {
+    [theme.breakpoints.up("sm")]: {
+      display: "flex",
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "space-around",
+    },
+  },
+}));
 
 function Drinks() {
+  const classes = useStyles();
+
   const sampleCocktails = [
     {
       name: "SpaceXperience",
@@ -81,10 +95,21 @@ function Drinks() {
 
   return (
     <div>
-      <h1 style={{ fontFamily: "Comfortaa", color: "#60AAFF", textAlign: "center", paddingTop: "80px"}}>Boissons</h1>
-      {sampleCocktails.map((cocktail, index) => (
-        <Card key={index} {...cocktail} />
-      ))}
+      <h1
+        style={{
+          fontFamily: "Comfortaa",
+          color: "#60AAFF",
+          textAlign: "center",
+          paddingTop: "80px",
+        }}
+      >
+        Boissons
+      </h1>
+      <div className={classes.cardContainer}>
+        {sampleCocktails.map((cocktail, index) => (
+          <Card key={index} {...cocktail} />
+        ))}
+      </div>
     </div>
   );
 }

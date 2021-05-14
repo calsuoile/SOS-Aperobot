@@ -22,6 +22,13 @@ const useStyles = makeStyles((theme) => ({
       background: "#7046FF",
       fontSize: "15px",
     },
+    [theme.breakpoints.up("sm")]: {
+      width: "300px",
+      fontSize: "30px",
+      "&:hover": {
+        fontSize: "30px",
+      },
+    },
   },
   buttonContaineur: {
     display: "flex",
@@ -56,16 +63,24 @@ function PopUpValider(props) {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title" style={{color:"#7046FF"}}>
+        <DialogTitle id="alert-dialog-title" style={{ color: "#7046FF" }}>
           {"Confirmation d'envoi"}
         </DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description" style={{color:"#60AAFF"}}>
+          <DialogContentText
+            id="alert-dialog-description"
+            style={{ color: "#60AAFF" }}
+          >
             Merci Percy, ta commande a bien été prise en compte.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClick} color="primary" autoFocus style={{color:"#60AAFF"}}>
+          <Button
+            onClick={handleClick}
+            color="primary"
+            autoFocus
+            style={{ color: "#60AAFF" }}
+          >
             Fermer
           </Button>
         </DialogActions>

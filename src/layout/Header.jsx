@@ -3,7 +3,7 @@ import MenuBurger from "../components/MenuBurger";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   burger: {
     display: "flex",
     justifyContent: "flex-end",
@@ -13,8 +13,20 @@ const useStyles = makeStyles({
     position: "fixed",
     top: 0,
     zIndex: 1,
+
+    [theme.breakpoints.up("sm")]: {
+      width: "100%",
+      height: "100px",
+      zINdex: 0,
+      justifyContent: "space-between",
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      height: "100px",
+      justifyContent: "space-between",
+    },
   },
-});
+}));
 
 function Header() {
   const classes = useStyles();
@@ -22,7 +34,7 @@ function Header() {
     <div className={classes.burger}>
       <Link to="/">
         <img
-          style={{ width: "100%" }}
+          style={{ width: "266px" }}
           src="assets/HEADER_apero.jpeg"
           alt="header"
         />
