@@ -33,16 +33,25 @@ LinearProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: "80px",
     marginLeft: "20px",
     marginRight: "20px",
     paddingTop: "120px",
+    [theme.breakpoints.up("sm")]: {
+      display: "flex",
+      justifyContent: "center",
+      flexDirection: "column",
+      alignItems: "center",
+    },
   },
   progressbar: {
     width: "70%",
     margin: "auto",
+    [theme.breakpoints.up("sm")]: {
+      margin: " 50px auto 50px auto",
+    },
   },
   title: {
     with: "85%",
@@ -50,12 +59,21 @@ const useStyles = makeStyles({
     textAlign: "center",
     color: "#60AAFF",
     fontFamily: "Comfortaa",
+    [theme.breakpoints.up("sm")]: {
+      fontSize: "30px",
+      width: "700px",
+      margin: "30px",
+    },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "25px",
+      padding: "30px",
+    },
   },
   plus: {
     color: "#60AAFF",
     margin: "auto",
   },
-});
+}));
 
 export default function ProgressBar() {
   const [open, setOpen] = useState(false);
