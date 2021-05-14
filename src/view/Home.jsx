@@ -19,9 +19,8 @@ function Home() {
           textAlign: "justify",
         }}
       >
-        Comme tu nous as dit que PHP t'ennuyais, nous t'avons préparé une petite
-        surprise. Commande l'apéro en quelques clics, ton pote reçoit la notif
-        et viens chercher la commande à te livrer.
+        Tes journées sur Mars sont longues et ennuyeuses ? Nous t'avons préparé une petite
+        surprise. Commande l'apéro en quelques clics, ton pote reçoit la notif, vient chercher la commande et te la livre.
       </h3>
       <img
         style={{ width: "360px", marginTop: "20px" }}

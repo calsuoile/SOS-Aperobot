@@ -15,9 +15,11 @@ function LinearProgressWithLabel(props) {
         <LinearProgress variant="determinate" {...props} />
       </Box>
       <Box minWidth={35}>
-        <Typography variant="body2" color="textPrimary">{`${Math.round(
-          props.value
-        )}%`}</Typography>
+        <Typography
+          variant="body2"
+          color="textPrimary"
+          style={{ color: "#60AAFF" }}
+        >{`${Math.round(props.value)}%`}</Typography>
       </Box>
     </Box>
   );
@@ -70,7 +72,7 @@ export default function ProgressBar() {
   useEffect(() => {
     const timer = setInterval(() => {
       if (progress < 100) {
-        setProgress(progress + 10);
+        setProgress(progress + 4);
       }
     }, 1000);
     return () => {
@@ -81,13 +83,13 @@ export default function ProgressBar() {
   useEffect(() => {
     setTimeout(() => {
       handleClickOpen();
-    }, 11000);
+    }, 26000);
   }, []);
 
   return (
     <div className={classes.root}>
       <h3 className={classes.title}>
-        6PO a préparé ta commande, elle est en cours de livraison, tu pourras
+        La commande est en cours de préparation et de livraison, tu pourras
         bientôt arrêter de t'ennuyer.
       </h3>
       <div className={classes.progressbar}>
@@ -110,7 +112,7 @@ export default function ProgressBar() {
           >
             <p style={{ color: "#60AAFF" }}>
               {" "}
-              Votre livreur est arrivé, enjoy !
+              Ginny est arrivé avec ta commande, enjoy !
             </p>
             <img
               src="assets/bender.gif"
